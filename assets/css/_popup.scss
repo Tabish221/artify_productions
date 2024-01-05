@@ -1,0 +1,167 @@
+.scrollStop{
+    scroll-behavior: unset !important;
+}
+
+.workOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #ffffff17;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    display: none;
+}
+
+.workPopup {
+    height: 90vh;
+    width: 767px;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #202020;
+    box-shadow: 0px 0px 15px 5px rgba(92, 92, 92, 0.28);
+    padding: 0px 0px 30px 30px;
+    border-radius: 10px;
+    display: none;
+
+    .workPopup-closed {
+        position: sticky;
+        top: 0;
+        right: 0;
+        margin: auto;
+        text-align: right;
+        cursor: pointer;
+        color: $white;
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 30px;
+
+        &:hover {
+            color: $theam1;
+        }
+    }
+
+    .workPopup-body {
+        height: calc(100% - 61px);
+        overflow-y: auto;
+        padding-right: 30px;
+    }
+
+    .workPopup-banner {
+        border-radius: 5px;
+        overflow: hidden;
+
+        video {
+            width: 100%;
+        }
+    }
+
+    .workPopup-conte {
+        padding-top: 20px;
+
+        h6 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
+            padding-bottom: 15px;
+            letter-spacing: 1.8px;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: $white;
+            padding-bottom: 25px;
+        }
+
+        span {
+            font-size: 15px;
+            display: block;
+            padding-bottom: 10px;
+            color: $white1;
+
+            b {
+                font-weight: 700;
+                padding-right: 5px;
+            }
+        }
+
+        .divider {
+            border-bottom: 1px solid rgba($white1, 0.28);
+            margin: 20px 0;
+        }
+
+        h5 {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: $white;
+            padding: 15px 0 20px;
+        }
+    }
+
+    .workPopup-cardList {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -7.5px;
+
+        .workPopup-card {
+            padding: 7.5px;
+            max-width: 33.33%;
+            flex: 0 0 33.33%;
+            .img {
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.4s ease-in-out;
+                font-size: 0;
+                padding: 0;
+                margin: 0;
+                border: none;
+
+                img {
+                    width: 100%;
+                    height: 170px;
+                    object-fit: cover;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($black, 0.5);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: all 0.4s ease-in-out;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+
+                    img {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+        }
+    }
+}
