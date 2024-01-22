@@ -2259,6 +2259,10 @@ footer .widget ul li a:hover {
   transform: scale(1.02);
 }
 
+#text-anim div {
+  display: inline-block;
+}
+
 @media (max-width: 1200px) {
   img {
     max-width: 100%;

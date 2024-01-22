@@ -292,6 +292,40 @@ tl_2.staggerFrom(
     ease: Power1.easeOut
 }, "+=1.2");
 
+// TEXT ANIMATION
+// document.addEventListener("DOMContentLoaded", function (event) {
+//     animation_text_1("#text-anim");
+// });
+
+// function animation_text_1(element) {
+//     var newText = "";
+//     var theText = document.querySelector(element);
+//     for (i = 0; i < theText.innerText.length; i++) {
+//         newText += "<div>";
+//         if (theText.innerText[i] == " ") { newText += "&nbsp;" }
+//         else { newText += theText.innerText[i]; }
+//         newText += "</div>";
+//     }
+//     theText.innerHTML = newText;
+//     gsap.fromTo(element + " div", {
+//         opacity: 0,
+//         y: 90
+//     }, {
+//         duration: 2,
+//         opacity: 1,
+//         y: 0,
+//         stagger: 0.03,
+//         ease: "elastic(1.2, 0.5)",
+//         scrollTrigger: {
+//             trigger: element,
+//             start: "top 70%", // start when the top of the <h1> reaches 70% down from the top of the viewport
+//             toggleActions: "restart none none reverse"
+//         }
+//     });
+// }
+
+
+
 
 // OUR WORK POPUP
 $(document).on('click', '.ourWorkBtn', function () {
@@ -351,3 +385,49 @@ $('.owl-carousel').owlCarousel({
 /* RESPONSIVE JS */
 if ($(window).width() < 825) {
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Split the text, Burrowing Owl --- */
+function setupSplits() {
+
+    var tlSplitBurrowing = gsap.timeline(),
+        SplitBurrowing = new SplitText("#titleBurrowing", { type: "chars" }),
+        chars = SplitBurrowing.chars; //an array of all the divs that wrap each character
+
+
+    tlSplitBurrowing.from(chars, {
+        duration: 0.8,
+        opacity: 0,
+        y: 10,
+        ease: "circ.out",
+        stagger: 0.02,
+        scrollTrigger: {
+            trigger: "#titleBurrowing",
+            start: "top 75%",
+            end: "bottom center",
+            scrub: 1
+        }
+    }, "+=0");
+};
+document.addEventListener("DOMContentLoaded", function (event) {
+    setupSplits();
+});
+
+// ScrollTrigger.addEventListener("refresh", setupSplits);
+
+

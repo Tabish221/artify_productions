@@ -2001,6 +2001,9 @@ footer {
 
 // TEST
 
+#text-anim div{
+	display: inline-block;
+}
 
 
 
@@ -2022,11 +2025,10 @@ footer {
 
 
 
-// @media (min-width: 1660) {
-// 	.container{
-// 		max-width: 1410px;
-// 	}
-// }
+
+@media (min-width: 1660) {
+	
+}
 
 @media (max-width:1440px) {}
 

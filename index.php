@@ -197,7 +197,7 @@
       <div class="container">
          <div class="hSec2-hd mn-hd hd-pad text-center padX12 wow fadeInUp center" data-wow-delay="0.2s">
             <h5>Our Services</h5>
-            <h6>Let us be the brush to your canvas, Light to your reel, the script to your story, and the lens to your vision.</h6>
+            <h6 id="titleBurrowing">Let us be the brush to your canvas, Light to your reel, the script to your story, and the lens to your vision.</h6>
          </div>
 
          <div class="stack-card-wrapper mn-hd mn-btn wow zoomIn center" data-wow-delay="0.4s">
