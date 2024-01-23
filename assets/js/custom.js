@@ -7,11 +7,23 @@ $(document).ready(function () {
     $("li:first-child").addClass("first");
     $("li:last-child").addClass("last");
     $('[href="#"]').attr("href", "javascript:;");
-    $('.menu-Bar').click(function () {
-        $(this).toggleClass('open');
-        $('.menuWrap').toggleClass('open');
-        $('body').toggleClass('ovr-hiddn');
-    });
+    // $('.menu-Bar').click(function () {
+    //     $(this).toggleClass('open');
+    //     $('.menuWrap').toggleClass('open');
+    //     $('body').toggleClass('ovr-hiddn');
+    // });
+});
+
+// Mobile Menu
+var len = $('.menu > li'), str;
+$(".menu-Bar").click(function () {
+    $(this).toggleClass("open");
+    $(".menuWrap").toggleClass("open");
+    $("body").toggleClass("ovr-hiddn");
+    for (var i = 1; i < len.length; i++) {
+        str = (300 + 100 * (i - 1)) + "ms";
+        len.eq(i).css('animation-delay', str)
+    }
 });
 
 
@@ -40,6 +52,23 @@ $('.review-slider').slick({
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
 });
 
 // Progress Bar
@@ -353,7 +382,7 @@ $('.owl-carousel').owlCarousel({
     items: 4,
     responsive: {
         0: {
-            items: 1
+            items: 3
         },
         600: {
             items: 3
@@ -403,30 +432,30 @@ if ($(window).width() < 825) {
 
 
 /* --- Split the text, Burrowing Owl --- */
-function setupSplits() {
+// function setupSplits() {
 
-    var tlSplitBurrowing = gsap.timeline(),
-        SplitBurrowing = new SplitText("#titleBurrowing", { type: "chars" }),
-        chars = SplitBurrowing.chars; //an array of all the divs that wrap each character
+//     var tlSplitBurrowing = gsap.timeline(),
+//         SplitBurrowing = new SplitText("#titleBurrowing", { type: "chars" }),
+//         chars = SplitBurrowing.chars; //an array of all the divs that wrap each character
 
 
-    tlSplitBurrowing.from(chars, {
-        duration: 0.8,
-        opacity: 0,
-        y: 10,
-        ease: "circ.out",
-        stagger: 0.02,
-        scrollTrigger: {
-            trigger: "#titleBurrowing",
-            start: "top 75%",
-            end: "bottom center",
-            scrub: 1
-        }
-    }, "+=0");
-};
-document.addEventListener("DOMContentLoaded", function (event) {
-    setupSplits();
-});
+//     tlSplitBurrowing.from(chars, {
+//         duration: 0.8,
+//         opacity: 0,
+//         y: 10,
+//         ease: "circ.out",
+//         stagger: 0.02,
+//         scrollTrigger: {
+//             trigger: "#titleBurrowing",
+//             start: "top 75%",
+//             end: "bottom center",
+//             scrub: 1
+//         }
+//     }, "+=0");
+// };
+// document.addEventListener("DOMContentLoaded", function (event) {
+//     setupSplits();
+// });
 
 // ScrollTrigger.addEventListener("refresh", setupSplits);
 

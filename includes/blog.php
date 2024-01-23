@@ -27,8 +27,8 @@
                            stand out. To truly...</p>
                      </div>
 
-                     <a href="Building-Brands-That-Stand-Out-Brand-Strategy-Advice-from-Specialists.php">
-                        Read MORE
+                     <a href="#">
+                        Read More
                         <em>
                            <i class="fas fa-chevron-double-right"></i>
                         </em>
@@ -54,8 +54,8 @@
                      <p>In an increasingly crowded online marketplace, having a clearly defined brand strategy is ...
                      </p>
 
-                     <a href="The-Importance-of-Brand-Strategy-in-Digital-Marketing.php">
-                        Read MORE
+                     <a href="#">
+                        Read More
                         <em>
                            <i class="fas fa-chevron-double-right"></i>
                         </em>
@@ -82,8 +82,8 @@
                      <p>In an increasingly noisy and competitive business landscape, having strong branding is no longer
                         ...</p>
 
-                     <a href="Maximizing-ROI-Why-Every-Business-Needs-a-Brand-Strategy-Consultant-in-2023.php">
-                        Read MORE
+                     <a href="#">
+                        Read More
                         <em>
                            <i class="fas fa-chevron-double-right"></i>
                         </em>

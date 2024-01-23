@@ -66,6 +66,9 @@ body {
   background-color: #000;
   font-weight: 300;
 }
+body.ovr-hiddn {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -775,7 +778,7 @@ ul.dropdown li.last a {
   display: block;
   height: 4px;
   width: 100%;
-  background: #ffff00;
+  background: #F4BB06;
   position: absolute;
   transition: 0.6s all;
   border-radius: 100px;
@@ -791,7 +794,7 @@ ul.dropdown li.last a {
   top: 16px;
 }
 .menu-Bar.open span {
-  background: #b70404;
+  background: white;
 }
 .menu-Bar.open span:nth-child(1) {
   transform: rotate(45deg);
@@ -2095,14 +2098,16 @@ footer .widget ul li a:hover {
 .contactSection1 .contactSec1-hd {
   padding-bottom: 35px;
 }
-.contactSection1 .contactSec1-form input, .contactSection1 .contactSec1-form textarea {
+.contactSection1 .contactSec1-form input,
+.contactSection1 .contactSec1-form textarea {
   border: 1px solid #999;
   box-shadow: none;
 }
 .contactSection1 .contactSec1-form .contactf-Feild {
   padding-bottom: 15px;
 }
-.contactSection1 .contactSec1-form .contactf-Feild input, .contactSection1 .contactSec1-form .contactf-Feild textarea {
+.contactSection1 .contactSec1-form .contactf-Feild input,
+.contactSection1 .contactSec1-form .contactf-Feild textarea {
   width: 100%;
   height: 45px;
   border-radius: 5px;
@@ -2200,7 +2205,8 @@ footer .widget ul li a:hover {
   padding: 20px 0 5px;
   font-weight: 700;
 }
-.contactSection1 .contactSec1-right .contactSec1-social ul li a, .contactSection1 .contactSec1-right .contactSec1-social ul li p {
+.contactSection1 .contactSec1-right .contactSec1-social ul li a,
+.contactSection1 .contactSec1-right .contactSec1-social ul li p {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
@@ -2216,14 +2222,26 @@ footer .widget ul li a:hover {
   gap: 20px;
   position: absolute;
   right: 0;
-  top: -75px;
+  top: 50px;
+}
+.workSec1-panel .owl-nav button {
+  font-size: 0;
+  padding: 0;
+  margin: 0;
 }
 .workSec1-panel .owl-nav button span {
+  color: #fff;
   font-size: 40px;
   transition: all 0.4s ease-in-out;
 }
-.workSec1-panel .owl-nav button span:hover {
+.workSec1-panel .owl-nav button:hover span {
   color: #F4BB06;
+}
+.workSec1-panel .owl-stage-outer {
+  overflow: hidden;
+}
+.workSec1-panel .owl-stage-outer .owl-stage {
+  display: flex;
 }
 .workSec1-panel .workSec1-card {
   cursor: pointer;
@@ -2263,7 +2281,234 @@ footer .widget ul li a:hover {
   display: inline-block;
 }
 
+@media (max-width: 1440px) {
+  .menu {
+    gap: 25px;
+  }
+  .menu li a {
+    font-size: 16px;
+  }
+  .menu li.navBtn a {
+    padding: 10px 20px;
+  }
+  .mainBanner .videoBg video {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+  .mainBanner .mainBanner-cont {
+    padding-right: 150px;
+  }
+  .mainBanner .mainBanner-cont h2 {
+    font-size: 18px;
+    letter-spacing: 3.5px;
+    padding-bottom: 15px;
+  }
+  .mainBanner .mainBanner-cont h2::before {
+    width: 30px;
+    height: 3px;
+  }
+  .mainBanner .mainBanner-cont h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+  .mainBanner .mainBanner-cont p {
+    font-size: 22px;
+    letter-spacing: 0;
+    padding-bottom: 30px;
+    line-height: 1.3;
+  }
+  .mn-hd h6 {
+    font-size: 30px;
+    letter-spacing: 0.4px;
+  }
+  .mn-hd p {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+  }
+  .mn-hd h5 {
+    gap: 10px;
+    font-size: 20px;
+    letter-spacing: 3.5px;
+  }
+  .mn-hd h5::before {
+    width: 30px;
+    height: 3px;
+  }
+  .mn-btn a {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .stacked-card .content h5 {
+    font-size: 15px;
+    padding-bottom: 5px;
+    letter-spacing: 1.5px;
+  }
+  .stacked-card .content h6 {
+    font-size: 28px;
+  }
+  .proceSec-cont ul li div h6 {
+    font-size: 20px;
+  }
+  .proceSec-cont ul li div p {
+    font-size: 16px;
+  }
+  .blog-card .blogCard-card h4 {
+    font-size: 18px;
+  }
+  .blog-card .blogCard-card p {
+    font-size: 14px;
+  }
+  .innerFAQSec-accordion .accordion li .acc_title {
+    font-size: 17px;
+    padding: 15px 10px 15px;
+  }
+  .ctaSection1 .ctaSec1-hd p {
+    font-size: 18px;
+    padding-bottom: 40px;
+  }
+  .ctaSection1 .ctaSec1-hd p a {
+    font-size: 18px;
+  }
+  footer .widget-about h6,
+  footer .widget h6 {
+    font-size: 18px;
+  }
+  footer .widget-about ul li a,
+  footer .widget ul li a {
+    font-size: 14px;
+  }
+}
 @media (max-width: 1200px) {
+  .menu {
+    gap: 20px;
+  }
+  .mainBanner {
+    padding-top: 150px;
+  }
+  .mainBanner .mainBanner-cont {
+    padding-right: 0;
+  }
+  .proceSection-img {
+    margin-left: -40px;
+  }
+  .proceSection-img video {
+    width: 110%;
+  }
+  .reviewCard .reviewCard-body p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .menu {
+    gap: 10px;
+  }
+  .menu li a {
+    font-size: 12px;
+  }
+  .menu li.navBtn a {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .logo img {
+    display: block;
+    width: 70px;
+  }
+  .mainBanner {
+    padding-top: 130px;
+    padding-bottom: 120px;
+    min-height: 1px;
+  }
+  .sec-pad {
+    padding: 40px 0;
+  }
+  .pt-160 {
+    padding-top: 80px;
+  }
+  .homeSection1 .hSec1-bottom {
+    padding-top: 40px;
+  }
+  .padX12 {
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+  .hd-pad {
+    padding-bottom: 25px;
+  }
+  .stacked-card .row {
+    row-gap: 20px;
+  }
+  .mn-btn a {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .proceSec-cont ul li div {
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+  .proceSec-cont ul li span {
+    flex: 0 0 25px;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 2px;
+  }
+  .proceSec-cont ul li::after {
+    content: "";
+    width: 0px;
+    height: 0%;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    border-left: 4px dotted #bebebe;
+    transition: all 1.2s ease-in-out;
+  }
+  .proceSec-cont ul li {
+    padding-bottom: 20px;
+  }
+  .proceSec-cont ul li div h6 {
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  .proceSec-cont ul li div p {
+    font-size: 13px;
+  }
+  .padX18 {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .blog-card .blogCard-card {
+    padding: 0 15px 15px;
+  }
+  .blog-card .blogCadr-img {
+    margin-bottom: 35px;
+  }
+  .blog-card .blogCadr-img .blogCard-date {
+    border-radius: 2px;
+    left: 15px;
+    bottom: -15px;
+    width: 50px;
+    height: 40px;
+  }
+  .blog-card .blogCadr-img .blogCard-date span {
+    font-size: 9px;
+    font-weight: 600;
+  }
+  .blog-card .blogCadr-img .blogCard-date h6 {
+    font-size: 17px;
+  }
+  .blog-card .blogCard-card h4 {
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+@media (max-width: 767px) {
   img {
     max-width: 100%;
     height: auto;
@@ -2283,7 +2528,9 @@ footer .widget ul li a:hover {
     top: 0;
     bottom: 0;
     margin: auto;
-    background: #ff8000;
+    background: rgba(0, 0, 0, 0.9019607843);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -2291,7 +2538,8 @@ footer .widget ul li a:hover {
     flex-flow: column;
     transition: all 0.4s ease;
     z-index: 3;
-    width: 100vw;
+    width: 220px;
+    margin-left: 0;
   }
   ul.menu li {
     display: block;
@@ -2327,5 +2575,426 @@ footer .widget ul li a:hover {
   }
   header .main-header ul.menu > li a:before {
     display: none;
+  }
+  .mainBanner .mainBanner-cont h2 {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+  }
+  .mainBanner .mainBanner-cont h2::before {
+    width: 20px;
+  }
+  .mainBanner .mainBanner-cont h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    letter-spacing: 1.5px;
+    padding-bottom: 15px;
+  }
+  .mainBanner .mainBanner-cont p {
+    font-size: 16px;
+    padding-bottom: 10px;
+    line-height: 1.35;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .mn-btn a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+  }
+  .mn-btn a span.svg {
+    font-size: 0;
+  }
+  .mn-btn a span.svg svg {
+    width: 7px;
+    height: 7px;
+  }
+  .mainBanner .mainBanner-socialIcon {
+    gap: 8px;
+    bottom: 10px;
+    right: 5%;
+  }
+  .mainBanner .mainBanner-socialIcon b {
+    font-size: 10px;
+    letter-spacing: 3.5px;
+  }
+  .mainBanner .mainBanner-socialIcon em {
+    width: 15px;
+    height: 2px;
+  }
+  .mainBanner .mainBanner-socialIcon ul li a {
+    font-size: 12px;
+  }
+  .pt-160 {
+    padding-top: 60px;
+  }
+  .sec-pad {
+    padding: 30px 0;
+  }
+  .homeSection1 .hSec1-cont .mn-btn {
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
+  .beforeAfter {
+    padding-left: 0;
+  }
+  .homeSection1 .hSec1-bottom {
+    padding-top: 20px;
+  }
+  .brandIcon-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .brandIcon-main .brandIcon {
+    width: 25%;
+    text-align: center;
+  }
+  .mn-hd h5 {
+    gap: 7px;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+  .mn-hd h5::before {
+    width: 20px;
+    height: 2px;
+    margin-bottom: 3px;
+  }
+  .mn-hd h6 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  .stacked-card {
+    padding: 20px 15px;
+  }
+  .stacked-card .content h5 {
+    font-size: 12px;
+    padding-bottom: 10px;
+    letter-spacing: 3px;
+  }
+  .stacked-card .content h6 {
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
+  .padX18,
+  .padX15,
+  .padX12 {
+    padding-right: 0%;
+    padding-left: 0%;
+  }
+  br {
+    display: none;
+  }
+  .review-slider .slick-slide {
+    /* margin: 0; */
+    padding: 0 0px 0 30px;
+  }
+  .ctaSection1 .ctaSec1-hd h5::before {
+    display: none;
+  }
+  footer {
+    padding: 40px 0 20px;
+  }
+  .widget-about {
+    align-items: flex-start !important;
+  }
+  .footer-logo {
+    width: 80px;
+  }
+  footer .widget-about h6,
+  footer .widget h6 {
+    font-size: 16px;
+    letter-spacing: 1.7px;
+    padding-bottom: 15px;
+  }
+  .footer-logo {
+    width: 80px;
+    padding-top: 40px;
+  }
+  footer .widget-about .footer-socialIcon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-top: 3px;
+    padding-bottom: 20px;
+  }
+  footer .widget-about .footer-socialIcon b {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  footer .widget-about .footer-socialIcon em {
+    width: 15px;
+    height: 2px;
+    border-radius: 30px;
+  }
+  footer .widget-about .footer-socialIcon ol li a {
+    font-size: 12px;
+  }
+  footer .widget.padleft {
+    padding-left: 0;
+  }
+  footer .col-md-3 {
+    width: 50%;
+  }
+  footer .col-md-3 .widget {
+    padding-left: 20px;
+  }
+  footer .widget ul li {
+    padding-bottom: 15px;
+  }
+  footer .widget-about ul li {
+    padding-bottom: 10px;
+  }
+  .copyright {
+    text-align: center;
+  }
+  .copyright .row {
+    row-gap: 7px;
+  }
+  .copyright .cont {
+    text-align: center !important;
+    justify-content: center;
+  }
+  .ctaSection1 .ctaSec1-hd p {
+    font-size: 15px;
+    padding-bottom: 30px;
+  }
+  .ctaSection1 .ctaSec1-hd p a {
+    font-size: 15px;
+  }
+  header {
+    padding: 5px 0;
+  }
+  .menuWrap {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+    padding: 20px 15px 70px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    z-index: 2;
+  }
+  header .main-header ul.menu > li a {
+    padding: 0;
+    margin: 0;
+  }
+  header .main-header ul.menu > li a {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+  .menu li.navBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+  .menu li.active a::after {
+    width: 60%;
+    height: 2px;
+    bottom: -1px;
+  }
+  .menuWrap:before {
+    content: "";
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(222, 167, 18, 0.1882352941);
+    height: 100%;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  .menuWrap.open:before {
+    opacity: 1;
+  }
+  .menuWrap:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.662745098);
+    height: 100%;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  header .main-header ul.menu li.navBtn a {
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+  }
+  .mn-hd .hd-pra {
+    font-size: 15px;
+  }
+  .workSec1-panel .owl-nav {
+    top: -8px;
+  }
+  .menuWrap.open ul.menu li {
+    animation-name: fadeInDown;
+    animation-duration: 1.25s;
+    animation-fill-mode: both;
+  }
+  .workSec1-panel .workSec1-card img {
+    height: 100px;
+  }
+  .workSec1-main .owl-item {
+    margin: 0;
+  }
+  .workSec1-main .owl-dots {
+    display: none;
+  }
+  .workSec1-panel {
+    padding: 0;
+  }
+  .blog-card .blogCard-card a {
+    font-size: 12px;
+    gap: 8px;
+    letter-spacing: 2px;
+  }
+  .blog-card .blogCard-card p {
+    padding-bottom: 20px;
+  }
+  .blog-card .blogCard-card h4 {
+    min-height: 1px;
+  }
+  .innerFAQSec-accordion .accordion li .acc_title {
+    font-size: 16px;
+  }
+  .innerFAQSec-accordion .accordion li .acc_desc {
+    padding: 10px 10px 10px 10px;
+  }
+  .innerFAQSec-accordion .accordion li .acc_desc p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .stacked-card .row .col-lg-6:nth-child(2) {
+    display: none;
+  }
+  .innerBanner {
+    padding: 90px 0 30px;
+    min-height: 10px;
+  }
+  .innerBanner .innerBanner-cont h1 {
+    font-size: 32px;
+    padding-bottom: 0px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+  section.innerBanner .row .col-md-8 {
+    width: calc(100% - 100px);
+  }
+  section.innerBanner .row .col-md-4 {
+    width: 100px;
+  }
+  .circel-tex-area1 {
+    max-width: 40px;
+    max-height: 40px;
+    z-index: 10;
+    position: relative;
+  }
+  .rounded-text {
+    width: 40px;
+    height: 40px;
+  }
+  .circel-tex-area1 img {
+    width: 20px;
+    height: 20px;
+  }
+  .breadcrumb .breadcrumb-item a, .breadcrumb .breadcrumb-item.active {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .breadcrumb .breadcrumb-item.active {
+    padding-top: 2px;
+  }
+  .water-text-two h1 {
+    font-size: 25px;
+  }
+  .aboutSection1 .aboutSec1-cont {
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0.7490196078);
+    transform: translateY(-150px);
+    width: 95%;
+    margin: auto;
+    padding: 10px 15px 0 15px;
+    border-radius: 5px;
+    margin-bottom: -150px;
+  }
+  .mn-hd p {
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+  }
+  .mn-hd h6 {
+    padding-bottom: 15px;
+  }
+  .mn-hd h5 {
+    padding-bottom: 6px;
+  }
+  .pt-60 {
+    padding-top: 30px;
+  }
+  .aboutSection2 .aboutSec2-cont ul {
+    padding: 20px 0 30px;
+    row-gap: 15px;
+    margin: 0 -7px;
+  }
+  .aboutSection2 .aboutSec2-cont ul li {
+    padding: 0 7px;
+    width: 100%;
+    flex: 0 0 100%;
+  }
+  .aboutSection2 .aboutSec2-cont ul li .aboutSec2-card {
+    padding: 10px 10px;
+  }
+  .aboutSection2 .aboutSec2-cont ul li h6 {
+    font-size: 14px;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+  }
+  .aboutSection2 .aboutSec2-cont ul li h5 {
+    font-size: 30px;
+    gap: 5px;
+  }
+  .aboutSection2 .aboutSec2-cont ul li h5 span {
+    font-size: 12px;
+  }
+  .aboutSection2 .aboutSec2-awward {
+    gap: 5px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+  }
+  .aboutSection2 .aboutSec2-right {
+    padding-left: 0;
+  }
+  .skills-bar-container {
+    margin-top: 20px;
+  }
+  .skills-bar-container li {
+    margin-bottom: 25px;
+  }
+  .skills-bar-container li .progressbar-title {
+    font-size: 14px;
+    padding-bottom: 3px;
+  }
+  .proSec1-head {
+    padding: 30px 0;
+  }
+  .proSec1-head ul {
+    gap: 15px;
+  }
+  .proSec1-head ul li a {
+    font-weight: 500;
   }
 }/*# sourceMappingURL=style.css.map */

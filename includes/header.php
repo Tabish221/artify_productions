@@ -18,16 +18,20 @@
 							<li class="active"><a href="./">Home</a></li>
 							<li><a href="about-us">About Us</a></li>
 							<li><a href="our-process">Our Process</a></li>
-							<li><a href="#">Services</a></li>
-							<li>
-							<!-- class="dropdown-nav" -->
-								<a href="our-work">Our Work</a>
-								<!-- <ul class="dropdown">
+							<li class="dropdown-nav">
+								<a href="#">Services</a>
+
+								<ul class="dropdown">
 									<li><a href="#">Commercials</a></li>
 									<li><a href="#">Interviews</a></li>
 									<li><a href="#">Animation</a></li>
 									<li><a href="#">Music Videos</a></li>
-								</ul> -->
+								</ul>
+							</li>
+							<li>
+							<!--  -->
+								<a href="our-work">Our Work</a>
+								<!--  -->
 							</li>
 							<li><a href="blog">Blog</a></li>
 							<li class="navBtn"><a href="contact-us">Contact Us</a></li>

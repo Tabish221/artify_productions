@@ -27,7 +27,7 @@
             <source src="assets/video/main_banner.mp4" type="video/mp4">
          </video>
       </div>
-      <div class="shape-polygon">
+      <!-- <div class="shape-polygon">
          <div class="inner">
             <div class="single">
                <video loop autoplay muted>
@@ -60,7 +60,7 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <div class="container">
          <div class="row align-items-end">
             <div class="col-md-10">
