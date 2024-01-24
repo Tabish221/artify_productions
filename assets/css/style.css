@@ -626,6 +626,11 @@ header.sticky .logo img {
   width: 60px;
 }
 
+/* Dropdown CSS*/
+.sticky.nav-up {
+  transform: translateY(-100px);
+}
+
 .logo {
   display: inline-block;
   position: relative;
@@ -711,7 +716,7 @@ header.sticky .logo img {
     opacity: 0;
   }
   100% {
-    top: 60px;
+    top: 55px;
     opacity: 1;
   }
 }
@@ -731,13 +736,15 @@ header.sticky .logo img {
 ul.dropdown {
   position: absolute;
   width: 280px;
-  right: 0px;
+  left: 0px;
   margin: auto;
-  background: rgba(80, 80, 80, 0.5);
-  padding: 20px;
+  background: rgba(59, 59, 59, 0.7);
+  padding: 20px 30px;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   text-align: left;
   border-radius: 2px;
-  box-shadow: 0 0 10px 3px rgba(120, 120, 120, 0.08);
+  box-shadow: inset 0px 0px 10px 0px rgba(222, 167, 18, 0.22);
   opacity: 0;
   animation: btotreverse 0.5s forwards;
 }
@@ -2222,7 +2229,7 @@ footer .widget ul li a:hover {
   gap: 20px;
   position: absolute;
   right: 0;
-  top: 50px;
+  top: -55px;
 }
 .workSec1-panel .owl-nav button {
   font-size: 0;
@@ -2279,6 +2286,106 @@ footer .widget ul li a:hover {
 
 #text-anim div {
   display: inline-block;
+}
+
+.serviceSection1 .serSec1-count {
+  text-align: center;
+  position: relative;
+}
+.serviceSection1 .serSec1-count b {
+  display: inline-block;
+  width: 3px;
+  height: 370px;
+  background-color: #333;
+  position: absolute;
+  top: 55px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+.serviceSection1 .serSec1-count b em {
+  display: inline-block;
+  width: 3px;
+  height: 0%;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+.serviceSection1 .serSec1-count span {
+  border: 2px solid #fff;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  border-radius: 6px;
+  background-color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  transition: all 0.2s ease-in-out;
+}
+.serviceSection1 .serSec1-main .serSec1-mainBox:nth-last-child(1) .serSec1-count b {
+  display: none;
+}
+.serviceSection1 .serSec1-mainBox {
+  padding: 20px 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.2;
+}
+.serviceSection1 .serSec1-card {
+  height: 400px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+}
+.serviceSection1 .serSec1-card .serSec1-cardCont {
+  padding: 24px 30px;
+  background-color: #000;
+  max-width: calc(100% - 320px);
+  flex: calc(100% - 320px);
+}
+.serviceSection1 .serSec1-card .serSec1-cardCont h5 {
+  font-size: 16px;
+  gap: 10px;
+  letter-spacing: 2.5;
+  padding-bottom: 10px;
+}
+.serviceSection1 .serSec1-card .serSec1-cardCont h6 {
+  font-size: 36px;
+}
+.serviceSection1 .serSec1-card .serSec1-cardCont p {
+  padding-bottom: 35px;
+}
+.serviceSection1 .serSec1-card .serSec1-cardLink {
+  height: 400px;
+  padding: 24px 24px;
+  border-left: 1px solid #fff;
+  background-color: #000818;
+  background-image: url(../images/service/black-bg.jpg);
+  max-width: 320px;
+  flex: 0 0 320px;
+}
+.serviceSection1 .serSec1-card .serSec1-cardLink h6 {
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 0.4px;
+  padding-bottom: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.serviceSection1 .serSec1-card .serSec1-cardLink ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @media (max-width: 1440px) {
@@ -2381,6 +2488,13 @@ footer .widget ul li a:hover {
   footer .widget ul li a {
     font-size: 14px;
   }
+  .proSec1-head ul li a {
+    font-size: 22px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social {
+    font-size: 0;
+    padding: 37px 15px;
+  }
 }
 @media (max-width: 1200px) {
   .menu {
@@ -2400,6 +2514,44 @@ footer .widget ul li a:hover {
   }
   .reviewCard .reviewCard-body p {
     font-size: 14px;
+  }
+  .aboutSection1 .aboutSec1-cont {
+    padding-left: 0px;
+  }
+  .aboutSection2 .aboutSec2-cont ul li {
+    padding: 0 10px;
+  }
+  .aboutSection2 .aboutSec2-cont ul {
+    padding: 20px 0;
+  }
+  .aboutSection2 .aboutSec2-awward {
+    padding-top: 30px;
+  }
+  .proSec1-head ul li a {
+    font-size: 18px;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardLink {
+    padding: 20px 20px;
+    max-width: 280px;
+    flex: 0 0 280px;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardCont {
+    padding: 20px 24px;
+    max-width: calc(100% - 280px);
+    flex: calc(100% - 280px);
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardCont h5 {
+    font-size: 12px;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardCont h6 {
+    font-size: 30px;
+  }
+  .ctaSection1 .ctaSec1-hd h6 br {
+    display: none;
+  }
+  .padX8 {
+    padding-right: 3%;
+    padding-left: 3%;
   }
 }
 @media (max-width: 992px) {
@@ -2506,6 +2658,97 @@ footer .widget ul li a:hover {
     font-size: 16px;
     letter-spacing: 0;
     font-weight: 400;
+  }
+  .mn-hd h5 {
+    gap: 8px;
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    padding-bottom: 10px;
+  }
+  .mn-hd h5::before {
+    width: 20px;
+    height: 2px;
+  }
+  .mn-hd h6 {
+    font-size: 24px;
+    letter-spacing: 0.4px;
+    padding-bottom: 15px;
+  }
+  .mn-hd p {
+    font-size: 14px;
+  }
+  .contactSection1 .contactSec1-left {
+    padding-right: 0px;
+  }
+  .contactSection1 .contactSec1-form .form-check {
+    font-size: 12px;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  .contactSec1-card .row {
+    flex-direction: column;
+  }
+  .contactSec1-card .row .col-md-5, .contactSec1-card .row .col-md-7 {
+    width: 100%;
+  }
+  .contactSection1 .contactSec1-right iframe {
+    height: 300px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social {
+    padding: 20px 15px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social ul {
+    gap: 10px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social ul li .icon {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social ul li h6 {
+    font-size: 16px;
+    padding: 10px 0 5px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social ul li a, .contactSection1 .contactSec1-right .contactSec1-social ul li p {
+    font-size: 12px;
+  }
+  .proSec1-head ul {
+    gap: 15px;
+  }
+  .proSec1-head ul .proSec1-head ul {
+    font-size: 16px;
+  }
+  .processSec1-main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .water-text-two h1 {
+    font-size: 40px;
+  }
+  .proSec1-head .fixed-product.sticky-product ul {
+    gap: 15px;
+  }
+  .proSec1-head .fixed-product.sticky-product ul li a {
+    font-size: 14px;
+  }
+  .aboutSection2 .aboutSec2-cont ul li h6 {
+    font-size: 12px;
+  }
+  .aboutSection2 .aboutSec2-cont ul li h5 {
+    font-size: 28px;
+  }
+  .aboutSection2 .aboutSec2-cont ul li h5 span {
+    font-size: 12px;
+  }
+  .aboutSection2 .aboutSec2-right {
+    padding-left: 0;
+  }
+  .skills-bar-container li .progressbar-title {
+    font-size: 16px;
+  }
+  .padX8 {
+    padding-right: 0%;
+    padding-left: 0%;
   }
 }
 @media (max-width: 767px) {
@@ -2838,7 +3081,7 @@ footer .widget ul li a:hover {
     font-size: 15px;
   }
   .workSec1-panel .owl-nav {
-    top: -8px;
+    top: -45px;
   }
   .menuWrap.open ul.menu li {
     animation-name: fadeInDown;
@@ -2855,7 +3098,7 @@ footer .widget ul li a:hover {
     display: none;
   }
   .workSec1-panel {
-    padding: 0;
+    padding: 15px 0px;
   }
   .blog-card .blogCard-card a {
     font-size: 12px;
@@ -2989,12 +3232,150 @@ footer .widget ul li a:hover {
     padding-bottom: 3px;
   }
   .proSec1-head {
-    padding: 30px 0;
+    padding: 30px 0 10px;
   }
   .proSec1-head ul {
-    gap: 15px;
+    gap: 8px;
+    overflow-x: auto;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 10px;
   }
   .proSec1-head ul li a {
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 8px;
+    white-space: nowrap;
+  }
+  .processSec1-main.right .row {
+    flex-direction: column-reverse;
+  }
+  .processSec1-main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .processSec1-mainImg {
+    padding-bottom: 25px;
+  }
+  .processSec1-main .processSec1-mainCont ul li {
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  .processSec1-main .processSec1-mainCont ul li::after {
+    width: 6px;
+    height: 6px;
+    top: 5px;
+  }
+  .proSec1-head .fixed-product.sticky-product {
+    bottom: 10px;
+    padding: 10px 12px;
+  }
+  .proSec1-head .fixed-product.sticky-product ul {
+    gap: 8px;
+  }
+  .proSec1-head .fixed-product.sticky-product ul li a {
+    font-weight: 700;
+    font-size: 7px;
+    line-height: 1;
+    color: #bebebe;
+  }
+  .contactSection1 .row.align-items-center {
+    flex-direction: column-reverse;
+    row-gap: 40px;
+  }
+  .contactSection1::before {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+  }
+  .contactSection1 .contactSec1-hd {
+    padding-bottom: 15px;
+  }
+  .contactSection1 .contactSec1-form .form-check {
+    align-items: flex-end;
+    gap: 10px;
+    line-height: 0.7 !important;
+    font-size: 13px;
+  }
+  .contactSection1 .contactSec1-form .contactf-btn button {
+    padding: 12px 20px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    gap: 7px;
+  }
+  .contactSection1 .contactSec1-form .contactf-btn {
+    padding-top: 20px;
+  }
+  .contactSection1 .contactSec1-left {
+    padding-right: 0;
+  }
+  .ctaSection1::before {
+    width: 350px;
+    height: 300px;
+    top: 0px;
+    left: -50px;
+  }
+  .contactSection1 .contactSec1-right iframe {
+    height: 300px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social {
+    font-size: 0;
+    padding: 15px 10px 25px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social ul {
+    gap: 10px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social ul li .icon {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #F4BB06;
+    font-size: 10px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social ul li h6 {
+    font-size: 14px;
+    padding: 12px 0 4px;
+    letter-spacing: 1.2px;
+  }
+  .contactSection1 .contactSec1-right .contactSec1-social ul li p {
+    font-size: 14px;
+  }
+  .serviceSection1 .serSec1-card {
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius: 3px;
+    height: 410px;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardCont {
+    padding: 15px 10px;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    flex: auto;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardCont h6 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardCont p {
+    padding-bottom: 15px;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardLink {
+    padding: 15px 15px;
+    max-width: 100%;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardLink h6 {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    padding-bottom: 15px;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardLink ul {
+    gap: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

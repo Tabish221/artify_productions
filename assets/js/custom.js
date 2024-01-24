@@ -1,17 +1,11 @@
 $(window).on('load', function () {
     $("#loader").fadeOut();
-    console.log("first Loader")
 });
 
 $(document).ready(function () {
     $("li:first-child").addClass("first");
     $("li:last-child").addClass("last");
     $('[href="#"]').attr("href", "javascript:;");
-    // $('.menu-Bar').click(function () {
-    //     $(this).toggleClass('open');
-    //     $('.menuWrap').toggleClass('open');
-    //     $('body').toggleClass('ovr-hiddn');
-    // });
 });
 
 // Mobile Menu
@@ -54,21 +48,21 @@ $('.review-slider').slick({
     slidesToScroll: 1,
     responsive: [
         {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-          }
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+            }
         },
         {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-          }
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+            }
         }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
-      ]
+    ]
 });
 
 // Progress Bar
@@ -416,6 +410,53 @@ if ($(window).width() < 825) {
 }
 
 
+// Hide header on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = document.querySelector('header').offsetHeight;
+
+window.addEventListener('scroll', function (event) {
+    didScroll = true;
+});
+
+if (window.innerWidth > 1200) {
+    setInterval(function () {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = window.scrollY;
+
+        // Make scroll more than delta
+        if (Math.abs(lastScrollTop - st) <= delta) {
+            return;
+        }
+
+        // If scrolled down and past the navbar, add class .nav-up.
+        if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll Down
+            document.querySelector('header').classList.remove('nav-down');
+            document.querySelector('header').classList.add('nav-up');
+        } else {
+            // Scroll Up
+            if (st + window.innerHeight < document.documentElement.scrollHeight) {
+                document.querySelector('header').classList.remove('nav-up');
+                document.querySelector('header').classList.add('nav-down');
+            }
+        }
+        if (st < navbarHeight) {
+            document.querySelector('header').classList.remove('nav-down');
+        }
+
+        lastScrollTop = st;
+    }
+}
+
+
 
 
 
@@ -460,3 +501,33 @@ if ($(window).width() < 825) {
 // ScrollTrigger.addEventListener("refresh", setupSplits);
 
 
+
+gsap.registerPlugin(ScrollTrigger);
+
+const cards = gsap.utils.toArray(".serSec1-mainBox");
+const line = gsap.utils.toArray(".line");
+const spacer = 60;
+
+cards.forEach((card, index) => {
+
+    console.log(line[index], line);
+
+    const tb =  gsap.timeline({
+        start: 'center',
+        scrollTrigger: {
+            trigger: card,
+            // markers: true,
+            start: "top-=200 center",
+            end: 'bottom center',
+            scrub: true,
+        }
+    });
+    tb.to(card , {
+        opacity: 1,
+    }).to(line[index],{
+        height: '100%'
+    })
+
+
+
+});
