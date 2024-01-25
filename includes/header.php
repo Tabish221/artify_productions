@@ -17,14 +17,58 @@
 						<ul class="menu">
 							<li class="active"><a href="./">Home</a></li>
 							<li><a href="about-us">About Us</a></li>
-							<li class="dropdown-nav">
-								<a href="#">Services</a>
+							<li class="dropdown-nav serviceDropdown">
+								<a href="#">Services <i class="fas fa-chevron-down"></i></a>
 
 								<ul class="dropdown">
-									<li><a href="service">Commercials</a></li>
-									<li><a href="service">Interviews</a></li>
-									<li><a href="service">Animation</a></li>
-									<li><a href="service">Music Videos</a></li>
+									<li class="subDropdown-nav">
+										<a href="service">Photography & Videography  <i class="fas fa-chevron-right"></i></a>
+
+										<ul class="subDropdown">
+											<li><a href="#">Corporate Photography</a></li>
+											<li><a href="#">Lifestyle Photography</a></li>
+											<li><a href="#">Food Photography</a></li>
+											<li><a href="#">Shoot Strategy</a></li>
+											<li><a href="#">Product Photography</a></li>
+											<li><a href="#">Video Editing</a></li>
+										</ul>
+									</li>
+									<li class="subDropdown-nav">
+										<a href="service">Marketing <i class="fas fa-chevron-right"></i></a>
+
+										<ul class="subDropdown">
+											<li><a href="#">Organic Marketing (growth)</a></li>
+											<li><a href="#">Advertisment</a></li>
+											<li><a href="#">Social Media Marketing</a></li>
+											<li><a href="#">Influencer Marketing</a></li>
+											<li><a href="#">Performace Marketing</a></li>
+											<li><a href="#">Content Marketing</a></li>
+										</ul>
+									</li>
+									<li class="subDropdown-nav">
+										<a href="service">Graphic Designing <i class="fas fa-chevron-right"></i></a>
+
+										<ul class="subDropdown">
+											<li><a href="#">Logo Design</a></li>
+											<li><a href="#">Brand Style Guides</a></li>
+											<li><a href="#">Website Design</a></li>
+											<li><a href="#">App Design</a></li>
+											<li><a href="#">UX Design</a></li>
+											<li><a href="#">3D Designing</a></li>
+										</ul>
+									</li>
+									<li class="subDropdown-nav">
+										<a href="service">Coding <i class="fas fa-chevron-right"></i></a>
+
+										<ul class="subDropdown">
+											<li><a href="#">CMS Development</a></li>
+											<li><a href="#">E-Commerce Stores</a></li>
+											<li><a href="#">Landing Pages</a></li>
+											<li><a href="#">Mobile App Development</a></li>
+											<li><a href="#">Purposeful Personal Websites</a></li>
+											<li><a href="#">Custom Product Development</a></li>
+										</ul>
+									</li>
 								</ul>
 							</li>
 							<li>

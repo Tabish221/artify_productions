@@ -301,54 +301,18 @@ var $text2 = $(".text2 span"),
     tl_2 = new TimelineMax({
         repeat: -1
     });
-
-tl_2.staggerFrom(
-    $text2,
-    0.5, {
-    top: "+=25px",
-    rotation: "-=-3deg",
-    alpha: 0,
-    scale: 0.8,
-    ease: Power1.easeOut,
-}, 0.15).to($text2, 0.5, {
-    alpha: 0,
-    ease: Power1.easeOut
-}, "+=1.2");
-
-// TEXT ANIMATION
-// document.addEventListener("DOMContentLoaded", function (event) {
-//     animation_text_1("#text-anim");
-// });
-
-// function animation_text_1(element) {
-//     var newText = "";
-//     var theText = document.querySelector(element);
-//     for (i = 0; i < theText.innerText.length; i++) {
-//         newText += "<div>";
-//         if (theText.innerText[i] == " ") { newText += "&nbsp;" }
-//         else { newText += theText.innerText[i]; }
-//         newText += "</div>";
-//     }
-//     theText.innerHTML = newText;
-//     gsap.fromTo(element + " div", {
-//         opacity: 0,
-//         y: 90
-//     }, {
-//         duration: 2,
-//         opacity: 1,
-//         y: 0,
-//         stagger: 0.03,
-//         ease: "elastic(1.2, 0.5)",
-//         scrollTrigger: {
-//             trigger: element,
-//             start: "top 70%", // start when the top of the <h1> reaches 70% down from the top of the viewport
-//             toggleActions: "restart none none reverse"
-//         }
-//     });
-// }
-
-
-
+    tl_2.staggerFrom(
+        $text2,
+        0.5, {
+        top: "+=25px",
+        rotation: "-=-3deg",
+        alpha: 0,
+        scale: 0.8,
+        ease: Power1.easeOut,
+    }, 0.15).to($text2, 0.5, {
+        alpha: 0,
+        ease: Power1.easeOut
+    }, "+=1.2");
 
 // OUR WORK POPUP
 $(document).on('click', '.ourWorkBtn', function () {
@@ -361,7 +325,6 @@ $(document).on('click', '.ourWorkBtn', function () {
     myvideo.find('source').attr('src', `${srcs}#t=15,20`)
     myvideo[0].play();
 });
-
 $(document).on('click', '.workPopup-closed', function () {
     $('.workOverlay').hide();
     $('.workPopup').hide();
@@ -405,21 +368,14 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-/* RESPONSIVE JS */
-if ($(window).width() < 825) {
-}
-
-
 // Hide header on scroll down
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = document.querySelector('header').offsetHeight;
-
 window.addEventListener('scroll', function (event) {
     didScroll = true;
 });
-
 if (window.innerWidth > 1200) {
     setInterval(function () {
         if (didScroll) {
@@ -456,54 +412,7 @@ if (window.innerWidth > 1200) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --- Split the text, Burrowing Owl --- */
-// function setupSplits() {
-
-//     var tlSplitBurrowing = gsap.timeline(),
-//         SplitBurrowing = new SplitText("#titleBurrowing", { type: "chars" }),
-//         chars = SplitBurrowing.chars; //an array of all the divs that wrap each character
-
-
-//     tlSplitBurrowing.from(chars, {
-//         duration: 0.8,
-//         opacity: 0,
-//         y: 10,
-//         ease: "circ.out",
-//         stagger: 0.02,
-//         scrollTrigger: {
-//             trigger: "#titleBurrowing",
-//             start: "top 75%",
-//             end: "bottom center",
-//             scrub: 1
-//         }
-//     }, "+=0");
-// };
-// document.addEventListener("DOMContentLoaded", function (event) {
-//     setupSplits();
-// });
-
-// ScrollTrigger.addEventListener("refresh", setupSplits);
-
-
-
 gsap.registerPlugin(ScrollTrigger);
-
 const cards = gsap.utils.toArray(".serSec1-mainBox");
 const line = gsap.utils.toArray(".line");
 const spacer = 60;
@@ -531,3 +440,27 @@ cards.forEach((card, index) => {
 
 
 });
+
+
+
+
+
+
+
+/* RESPONSIVE JS */
+if ($(window).width() < 768) {
+    $(document).on("click", '.serviceDropdown', function(e){
+        e.preventDefault();
+
+        if($(this).hasClass('openDropdown')){
+            $('.menu>li').hide();
+            $('.openDropdown').removeClass('openDropdown');
+            $('.menu>li').show();
+        }else{
+            $(this).addClass('openDropdown');
+            $(this).siblings('li').hide();
+            $(this).fadeIn();
+        }
+
+    })
+}

@@ -50,13 +50,19 @@ header {
 		display: inline-block;
 
 		a {
-			display       : block;
+			display       : flex;
 			font-size     : 18px;
 			color         : #fff;
 			font-weight   : 300;
 			letter-spacing: 1.2px;
 			padding-bottom: 20px;
 			margin-top    : 20px;
+			align-items: center;
+			gap: 5px;
+
+			i{
+				font-size: 12px;
+			}
 
 			&:hover {
 				color: $theam1;
@@ -146,17 +152,17 @@ header {
 	}
 }
 
-ul.dropdown {
+.dropdown {
 	position       : absolute;
-	width          : 280px;
+	width          : 270px;
 	left           : 0px;
 	margin         : auto;
-	background     : rgb(59 59 59 / 70%);
-	padding        : 20px 30px;
+	background     : rgba(0, 0, 0, 0.9411764706);
+	// padding        : 20px 0;
 	backdrop-filter: blur(12px);
 	text-align     : left;
 	border-radius  : 2px;
-	box-shadow     : inset 0px 0px 10px 0px rgb(222 167 18 / 22%);
+	// box-shadow     : inset 0px 0px 10px 0px rgb(222 167 18 / 22%);
 	opacity        : 0;
 	animation      : btotreverse 0.5s forwards;
 
@@ -165,16 +171,23 @@ ul.dropdown {
 		display: inline-block;
 
 		a {
-			padding    : 0;
+			padding    : 20px 20px;
 			color      : $white !important;
-			display    : block;
 			width      : 100%;
-			margin     : 0px 0 20px;
+			margin     : 0px;
 			font-weight: 600;
 			background : transparent !important;
+			width: 100%;
+			font-size: 13px !important;
+			justify-content: space-between;
+
+			&::after{
+				display: none !important;
+			}
 
 			&:hover {
 				color: $theam2 !important;
+				background-color: $balck2 !important;
 			}
 		}
 
@@ -183,6 +196,95 @@ ul.dropdown {
 		}
 	}
 }
+
+/* Dropdown CSS*/
+@keyframes btotreverse2 {
+	0% {
+		left    : calc(100% + 20px);
+		opacity: 1;
+	}
+
+	100% {
+		left    : 100%;
+		opacity: 0;
+	}
+}
+
+@keyframes btot2 {
+	0% {
+		left    : 115px;
+		opacity: 0;
+	}
+
+	100% {
+		left    : calc(100% + 0px);
+		opacity: 1;
+	}
+}
+
+
+.subDropdown-nav {
+	position      : relative;
+	overflow      : hidden;
+	vertical-align: middle;
+
+	&:hover {
+		overflow: visible;
+
+		.subDropdown {
+			animation: btot2 0.5s forwards;
+			z-index  : 9;
+		}
+	}
+}
+
+.subDropdown {
+	position       : absolute;
+	width          : 270px;
+	top           : 0px;
+	margin         : auto;
+	background     : rgba(0, 0, 0, 0.9411764706);
+	// padding        : 20px 0;
+	backdrop-filter: blur(12px);
+	text-align     : left;
+	border-radius  : 2px;
+	// box-shadow     : inset 0px 0px 10px 0px rgb(222 167 18 / 22%);
+	opacity        : 0;
+	animation      : btotreverse2 0.5s forwards;
+
+	li {
+		width  : 100%;
+		display: inline-block;
+
+		a {
+			padding    : 20px 20px;
+			color      : $white !important;
+			width      : 100%;
+			margin     : 0px;
+			font-weight: 600;
+			background : transparent !important;
+			width: 100%;
+			font-size: 13px !important;
+			justify-content: space-between;
+
+			&::after{
+				display: none !important;
+			}
+
+			&:hover {
+				color: $theam2 !important;
+				background-color: $balck2 !important;
+			}
+		}
+
+		&.last a {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+
+
 
 /* Hamburger Menu */
 .menu-Bar {
@@ -1348,6 +1450,10 @@ footer {
 	min-height         : 450px;
 	background-color   : rgba(25, 27, 29, 1);
 
+	.col-md-4{
+		text-align: right;
+	}
+
 	&::before {
 		content      : '';
 		width        : 100%;
@@ -2053,7 +2159,6 @@ footer {
 			right: 0;
 			left: 0;
 			margin: auto;
-			transition: all 0.2s ease-in-out;
 			
 			em {
 				display: inline-block;
@@ -2065,7 +2170,6 @@ footer {
 				left: 0;
 				margin: auto;
 				z-index: 1;
-				transition: all 0.2s ease-in-out;
 			}
 		}
 
@@ -2152,6 +2256,78 @@ footer {
 				display: flex;
 				flex-direction: column;
 				gap: 20px;
+			}
+		}
+	}
+}
+
+.serviceSection2.processSection{
+	.proceSection-img {
+		filter: none;
+	}
+
+	.proceSec-cont ul li::after{
+		display: none;
+	}
+
+	.proceSec-cont ul li.active div{
+		padding-left: 0;
+	}
+}
+
+.serviceSection3{
+	.serSec2-main{
+		font-size: 0;
+		.serSec2-mainBox{
+			padding: 30px 0;
+			position: sticky;
+			top: 70px;
+			
+		}
+		[class^="col-md-"]{
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		.row .row{
+			margin: 0;
+		}
+
+		.serSec2-mainService{
+			border: 1px solid $white1;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 35px 30px;
+			background-color: $black;
+		}
+
+		.serSec2-mainSubCont{
+			border: 1px solid $white1;
+			height: 100%;
+			padding: 20px 15px;
+			text-align: center;
+			background-color: $black;
+			cursor: pointer;
+			transition: all 0.4s ease-in-out;
+
+			&:hover{
+				background-color: $balck2;
+			}
+
+			.icon{
+				width: 50px;
+				height: 50px;
+				margin: auto;
+			}
+
+			h5{
+				padding-top: 25px;
+				font-size: 22px;
+				line-height: 1.2;
+				font-weight: 600;
+				letter-spacing: 1px;
 			}
 		}
 	}

@@ -653,13 +653,18 @@ header.sticky .logo img {
   display: inline-block;
 }
 .menu li a {
-  display: block;
+  display: flex;
   font-size: 18px;
   color: #fff;
   font-weight: 300;
   letter-spacing: 1.2px;
   padding-bottom: 20px;
   margin-top: 20px;
+  align-items: center;
+  gap: 5px;
+}
+.menu li a i {
+  font-size: 12px;
 }
 .menu li a:hover {
   color: #F4BB06;
@@ -733,38 +738,115 @@ header.sticky .logo img {
   z-index: 9;
 }
 
-ul.dropdown {
+.dropdown {
   position: absolute;
-  width: 280px;
+  width: 270px;
   left: 0px;
   margin: auto;
-  background: rgba(59, 59, 59, 0.7);
-  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.9411764706);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
   text-align: left;
   border-radius: 2px;
-  box-shadow: inset 0px 0px 10px 0px rgba(222, 167, 18, 0.22);
   opacity: 0;
   animation: btotreverse 0.5s forwards;
 }
-ul.dropdown li {
+.dropdown li {
   width: 100%;
   display: inline-block;
 }
-ul.dropdown li a {
-  padding: 0;
+.dropdown li a {
+  padding: 20px 20px;
   color: #fff !important;
-  display: block;
   width: 100%;
-  margin: 0px 0 20px;
+  margin: 0px;
   font-weight: 600;
   background: transparent !important;
+  width: 100%;
+  font-size: 13px !important;
+  justify-content: space-between;
 }
-ul.dropdown li a:hover {
+.dropdown li a::after {
+  display: none !important;
+}
+.dropdown li a:hover {
   color: #DEA712 !important;
+  background-color: #1b1b1b !important;
 }
-ul.dropdown li.last a {
+.dropdown li.last a {
+  margin-bottom: 0px;
+}
+
+/* Dropdown CSS*/
+@keyframes btotreverse2 {
+  0% {
+    left: calc(100% + 20px);
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes btot2 {
+  0% {
+    left: 115px;
+    opacity: 0;
+  }
+  100% {
+    left: calc(100% + 0px);
+    opacity: 1;
+  }
+}
+.subDropdown-nav {
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.subDropdown-nav:hover {
+  overflow: visible;
+}
+.subDropdown-nav:hover .subDropdown {
+  animation: btot2 0.5s forwards;
+  z-index: 9;
+}
+
+.subDropdown {
+  position: absolute;
+  width: 270px;
+  top: 0px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.9411764706);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  text-align: left;
+  border-radius: 2px;
+  opacity: 0;
+  animation: btotreverse2 0.5s forwards;
+}
+.subDropdown li {
+  width: 100%;
+  display: inline-block;
+}
+.subDropdown li a {
+  padding: 20px 20px;
+  color: #fff !important;
+  width: 100%;
+  margin: 0px;
+  font-weight: 600;
+  background: transparent !important;
+  width: 100%;
+  font-size: 13px !important;
+  justify-content: space-between;
+}
+.subDropdown li a::after {
+  display: none !important;
+}
+.subDropdown li a:hover {
+  color: #DEA712 !important;
+  background-color: #1b1b1b !important;
+}
+.subDropdown li.last a {
   margin-bottom: 0px;
 }
 
@@ -1722,6 +1804,9 @@ footer .widget ul li a:hover {
   min-height: 450px;
   background-color: rgb(25, 27, 29);
 }
+.innerBanner .col-md-4 {
+  text-align: right;
+}
 .innerBanner::before {
   content: "";
   width: 100%;
@@ -2302,7 +2387,6 @@ footer .widget ul li a:hover {
   right: 0;
   left: 0;
   margin: auto;
-  transition: all 0.2s ease-in-out;
 }
 .serviceSection1 .serSec1-count b em {
   display: inline-block;
@@ -2314,7 +2398,6 @@ footer .widget ul li a:hover {
   left: 0;
   margin: auto;
   z-index: 1;
-  transition: all 0.2s ease-in-out;
 }
 .serviceSection1 .serSec1-count span {
   border: 2px solid #fff;
@@ -2386,6 +2469,65 @@ footer .widget ul li a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.serviceSection2.processSection .proceSection-img {
+  filter: none;
+}
+.serviceSection2.processSection .proceSec-cont ul li::after {
+  display: none;
+}
+.serviceSection2.processSection .proceSec-cont ul li.active div {
+  padding-left: 0;
+}
+
+.serviceSection3 .serSec2-main {
+  font-size: 0;
+}
+.serviceSection3 .serSec2-main .serSec2-mainBox {
+  padding: 30px 0;
+  position: sticky;
+  top: 70px;
+}
+.serviceSection3 .serSec2-main [class^=col-md-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.serviceSection3 .serSec2-main .row .row {
+  margin: 0;
+}
+.serviceSection3 .serSec2-main .serSec2-mainService {
+  border: 1px solid #bebebe;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 30px;
+  background-color: #000;
+}
+.serviceSection3 .serSec2-main .serSec2-mainSubCont {
+  border: 1px solid #bebebe;
+  height: 100%;
+  padding: 20px 15px;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.serviceSection3 .serSec2-main .serSec2-mainSubCont:hover {
+  background-color: #1b1b1b;
+}
+.serviceSection3 .serSec2-main .serSec2-mainSubCont .icon {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+.serviceSection3 .serSec2-main .serSec2-mainSubCont h5 {
+  padding-top: 25px;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 1440px) {
@@ -2552,6 +2694,16 @@ footer .widget ul li a:hover {
   .padX8 {
     padding-right: 3%;
     padding-left: 3%;
+  }
+  .menu li a i {
+    font-size: 7px;
+  }
+  .dropdown, .subDropdown {
+    width: 200px;
+  }
+  .dropdown li a, .subDropdown li a {
+    padding: 10px 12px;
+    font-size: 10px !important;
   }
 }
 @media (max-width: 992px) {
@@ -2750,6 +2902,75 @@ footer .widget ul li a:hover {
     padding-right: 0%;
     padding-left: 0%;
   }
+  .serviceSection1 .serSec1-card .serSec1-cardLink {
+    padding: 20px 20px;
+    max-width: 180px;
+    flex: 0 0 180px;
+  }
+  .serviceSection1 .serSec1-card .serSec1-cardCont {
+    padding: 20px 24px;
+    max-width: calc(100% - 180px);
+    flex: calc(100% - 180px);
+  }
+  .serviceSection2.processSection .proceSection-img {
+    margin: 0;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainService {
+    padding: 30px 10px;
+  }
+  .mn-btn a {
+    padding: 12px 20px;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainSubCont {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainSubCont h5 {
+    padding-top: 15px;
+    font-size: 16px;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainSubCont .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .innerFAQSec-accordion .accordion li .acc_title {
+    font-size: 15px;
+    padding: 15px 10px 15px;
+  }
+  .innerFAQSec-accordion .accordion li .acc_desc {
+    padding: 15px 10px 20px 10px;
+  }
+  .innerFAQSec-accordion .accordion li .acc_desc p {
+    font-size: 14px;
+  }
+  .ctaSection1 .ctaSec1-hd p, .ctaSection1 .ctaSec1-hd a {
+    font-size: 16px;
+  }
+  footer .widget-about .footer-socialIcon b {
+    font-size: 12px;
+  }
+  footer .widget-about h6, footer .widget h6 {
+    font-size: 16px;
+  }
+  footer .widget-about .footer-socialIcon em {
+    width: 15px;
+  }
+  footer .widget-about ol {
+    gap: 10px;
+  }
+  footer .widget-about ol a {
+    font-size: 12px;
+  }
+  .workSec1-panel .workSec1-card img {
+    height: 200px;
+  }
+  .menu li.active a::after {
+    height: 1px;
+    left: -1px;
+    bottom: 17px;
+  }
 }
 @media (max-width: 767px) {
   img {
@@ -2781,7 +3002,7 @@ footer .widget ul li a:hover {
     flex-flow: column;
     transition: all 0.4s ease;
     z-index: 3;
-    width: 220px;
+    width: 250px;
     margin-left: 0;
   }
   ul.menu li {
@@ -3019,7 +3240,7 @@ footer .widget ul li a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 25px;
+    gap: 5px;
     padding: 20px 15px 70px;
     width: 100%;
     height: 100%;
@@ -3032,21 +3253,34 @@ footer .widget ul li a:hover {
     margin: 0;
   }
   header .main-header ul.menu > li a {
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
     font-size: 20px;
     letter-spacing: 4px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .menu li.navBtn {
+  header .main-header ul.menu > li a i {
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+  }
+  header .main-header .menu li {
+    width: 100%;
+  }
+  header .main-header .menu li.navBtn {
     position: absolute;
     bottom: 20px;
     left: 20px;
     width: calc(100% - 40px);
   }
   .menu li.active a::after {
-    width: 60%;
+    width: 30px;
     height: 2px;
-    bottom: -1px;
+    bottom: 7px;
   }
   .menuWrap:before {
     content: "";
@@ -3076,6 +3310,9 @@ footer .widget ul li a:hover {
     width: 100%;
     max-width: 100%;
     font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    color: #000;
   }
   .mn-hd .hd-pra {
     font-size: 15px;
@@ -3343,11 +3580,25 @@ footer .widget ul li a:hover {
   .contactSection1 .contactSec1-right .contactSec1-social ul li p {
     font-size: 14px;
   }
+  .serviceSection1 .serSec1-count span {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .serviceSection1 .serSec1-count b {
+    height: 220px;
+    top: 40px;
+  }
+  .serviceSection1 .serSec1-mainBox {
+    padding: 10px 0;
+  }
   .serviceSection1 .serSec1-card {
     flex-direction: column;
     overflow-y: auto;
     border-radius: 3px;
-    height: 410px;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 250px;
   }
   .serviceSection1 .serSec1-card .serSec1-cardCont {
     padding: 15px 10px;
@@ -3363,6 +3614,7 @@ footer .widget ul li a:hover {
     padding-bottom: 15px;
   }
   .serviceSection1 .serSec1-card .serSec1-cardLink {
+    display: none;
     padding: 15px 15px;
     max-width: 100%;
     flex: 0 0 auto;
@@ -3377,5 +3629,101 @@ footer .widget ul li a:hover {
   }
   .serviceSection1 .serSec1-card .serSec1-cardLink ul {
     gap: 10px;
+  }
+  section.processSection.serviceSection2.sec-pad .proceSection-img.wow.fadeIn.center {
+    margin: 0;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainBox {
+    padding: 0px 15px 40px;
+    position: sticky;
+    top: 70px;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainService {
+    padding: 15px 15px;
+    text-align: center;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainSubCont {
+    padding: 12px 15px;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainSubCont h5 {
+    padding-top: 15px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainSubCont .icon {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+  }
+  .serviceSection3 .serSec2-main .serSec2-mainBox:nth-child(2n) > .row {
+    flex-direction: column-reverse;
+  }
+  .ctaSection1 .ctaSec1-hd p, .ctaSection1 .ctaSec1-hd a {
+    font-size: 12px;
+  }
+  footer .widget-about ul li a, footer .widget ul li a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .dropdown-nav {
+    overflow: hidden !important;
+  }
+  .openDropdown.dropdown-nav, .openDropdown .subDropdown-nav {
+    overflow: visible !important;
+  }
+  .dropdown-nav:hover ul.dropdown, .subDropdown-nav:hover ul.subDropdown {
+    animation: none !important;
+    z-index: 1;
+    opacity: 1;
+  }
+  .dropdown-nav ul.dropdown, .subDropdown-nav ul.subDropdown {
+    animation: none !important;
+    opacity: 1;
+  }
+  li.openDropdown > a > i {
+    transform: rotate(180deg);
+  }
+  li .dropdown-nav a, li .subDropdown-nav a {
+    padding: 10px 12px;
+    font-size: 12px !important;
+    letter-spacing: 0.3px !important;
+    font-weight: 400 !important;
+  }
+  li .dropdown-nav a i, li .subDropdown-nav a i {
+    display: none;
+  }
+  li .dropdown-nav .dropdown, li .dropdown-nav .subDropdown, li .subDropdown-nav .dropdown, li .subDropdown-nav .subDropdown {
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+  }
+  li.dropdown-nav.serviceDropdown.openDropdown > a {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+  }
+  li .subDropdown-nav > a {
+    font-size: 14px !important;
+    letter-spacing: 0.2px !important;
+    border-bottom: 1px solid #555;
+    color: #F4BB06 !important;
+  }
+  header .main-header ul.subDropdown {
+    padding: 5px 0 15px;
+  }
+  header .main-header ul.subDropdown > li a {
+    padding: 8px 0;
+    color: #bebebe !important;
+  }
+  header .main-header ul.subDropdown > li a:hover {
+    color: #fff !important;
+  }
+  .dropdown, .subDropdown {
+    width: 100%;
+    background-color: transparent;
+  }
+  .menu::-webkit-scrollbar {
+    width: 4px;
+    background-color: rgba(24, 24, 24, 0);
   }
 }/*# sourceMappingURL=style.css.map */
