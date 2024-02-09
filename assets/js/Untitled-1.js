@@ -213,3 +213,49 @@ function setupSplits() {
   setupSplits();
 
 
+
+
+
+
+
+
+
+
+// CARD ROTATED
+{/* <div class="mainDiv">
+  <div class="div"></div>
+  <div class="div"></div>
+  <div class="div"></div>
+  <div class="div"></div>
+  <div class="div"></div>
+</div> */}
+
+
+// import gsap from "https://esm.sh/gsap";
+// import ScrollTrigger from "https://esm.sh/gsap/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
+// const cards = gsap.utils.toArray(".div");
+
+// const tl_s3 = gsap.timeline('.mainDiv', {
+//   pin: true
+// });
+
+
+// cards.forEach((card, index) => {
+
+//   tl_s3.to(card,{
+//     scrollTrigger:{
+//       trigger: card,
+//       scroller:'body',
+//       start:'center center',
+//       end:'center center',
+//       markers: true,
+//       scrub: 1,
+//     },
+//     rotate:45
+//   })
+  
+// });
+
+
